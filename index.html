@@ -3,11 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>PowerCrack</title>
+<title>PowerCrack — macOS Forge</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 <style>
   :root{
-    /* macOS window chrome */
     --mac-titlebar:rgba(246,246,247,0.94);
     --mac-titlebar-border:rgba(0,0,0,0.12);
     --mac-titlebar-text:#3a3a3c;
@@ -19,10 +18,8 @@
     --tl-green:#28c840;
     --tl-green-border:#1aab29;
 
-    /* Terminal — LIGHT MODE */
     --term-bg:#ffffff;
     --term-bg-soft:#f8f9fa;
-    --term-bg-card:#f4f6f5;
     --term-green:#16a34a;
     --term-green-bright:#15803d;
     --term-green-dim:#22c55e;
@@ -33,7 +30,6 @@
     --term-text-faint:rgba(20,83,45,0.5);
     --term-border:rgba(22,163,74,0.28);
     --term-border-bright:rgba(22,163,74,0.55);
-    --term-shadow:rgba(20,83,45,0.06);
 
     --mono:ui-monospace,"SF Mono","Menlo","Monaco","Cascadia Code",Consolas,monospace;
     --sans:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","Helvetica Neue",Inter,system-ui,sans-serif;
@@ -343,7 +339,7 @@
     font-size:12px;
   }
 
-  /* ========== TERMINAL CONTENT — WHITE ========== */
+  /* ========== TERMINAL CONTENT ========== */
   .terminal-content{
     flex:1;
     background:var(--term-bg);
@@ -371,7 +367,6 @@
     to{opacity:1;transform:translateY(0)}
   }
 
-  /* prompt line */
   .prompt-line{
     font-family:var(--mono);
     font-size:11px;
@@ -387,7 +382,6 @@
   .prompt-line .dollar{color:var(--term-text-faint)}
   .prompt-line .cmd{color:var(--term-text)}
 
-  /* chapter tag */
   .chapter-tag{
     display:inline-flex;align-items:center;gap:8px;align-self:flex-start;
     font-family:var(--mono);
@@ -402,7 +396,6 @@
   }
   .chapter-tag i{font-size:9px}
 
-  /* icon block */
   .card-icon-wrap{
     display:flex;justify-content:center;
     margin-bottom:22px;
@@ -432,7 +425,6 @@
     50%{transform:scale(1.06);opacity:1}
   }
 
-  /* title */
   .card-title{
     font-family:var(--mono);
     font-size:22px;letter-spacing:-0.01em;font-weight:700;
@@ -475,7 +467,6 @@
     gap:14px;margin-bottom:10px;
   }
 
-  /* ========== CONTROLS ========== */
   .toggle-wrap{
     display:flex;align-items:center;justify-content:center;gap:20px;padding:12px 0;
   }
@@ -544,7 +535,6 @@
   .step-input::-webkit-outer-spin-button,
   .step-input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
 
-  /* ========== CUSTOM DROPDOWN ========== */
   .custom-select{position:relative;width:100%}
   .cs-trigger{
     width:100%;padding:14px 42px 14px 16px;
@@ -623,7 +613,6 @@
     border-color:var(--term-green-dim);
   }
 
-  /* text input */
   .nice-input{
     width:100%;padding:14px 16px;
     background:rgba(22,163,74,0.04);
@@ -689,7 +678,6 @@
   }
   .hotkey-btn i.hk-icon{color:var(--term-cyan);font-size:11px}
 
-  /* ========== REVIEW ========== */
   .review-section{margin-bottom:18px;text-align:left}
   .review-label{
     display:flex;align-items:center;gap:8px;
@@ -717,7 +705,6 @@
 
   .copy-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
 
-  /* ========== ACTION BUTTONS ========== */
   .card-actions{
     display:flex;align-items:center;gap:12px;
     margin-top:22px;padding-top:20px;
@@ -780,7 +767,6 @@
   .action-btn.back{background:rgba(22,163,74,0.03)}
   .action-btn.back:hover:not(:disabled){background:rgba(22,163,74,0.1)}
 
-  /* ========== TEST CARD ========== */
   .test-area{display:flex;flex-direction:column;gap:14px;text-align:left}
   .test-status-row{
     display:flex;align-items:center;gap:10px;flex-wrap:wrap;
@@ -859,7 +845,6 @@
   .test-log-line .num{color:var(--term-cyan);margin-right:8px;font-weight:600}
   .test-log-empty{color:var(--term-text-faint);font-style:italic}
 
-  /* ========== TOAST ========== */
   .toast{
     position:fixed;bottom:26px;left:50%;
     transform:translate(-50%,80px);
@@ -867,7 +852,6 @@
     padding:13px 20px;border-radius:12px;
     font-family:var(--sans);
     font-size:13px;font-weight:560;
-    letter-spacing:0;
     display:flex;align-items:center;gap:10px;
     background:rgba(255,255,255,0.96);
     backdrop-filter:blur(28px) saturate(180%);
@@ -884,7 +868,6 @@
   .toast.warn i{color:#d97706}
   .toast.warn{border-color:rgba(217,119,6,0.4);color:#92400e}
 
-  /* ========== RESPONSIVE ========== */
   @media(max-width:640px){
     body{padding:60px 10px 30px}
     .stage{max-width:100%}
@@ -966,53 +949,28 @@
           <filter id="softShadow" x="-30%" y="-30%" width="160%" height="160%">
             <feGaussianBlur in="SourceAlpha" stdDeviation="4"/>
             <feOffset dx="0" dy="3" result="offsetblur"/>
-            <feComponentTransfer>
-              <feFuncA type="linear" slope="0.55"/>
-            </feComponentTransfer>
-            <feMerge>
-              <feMergeNode/>
-              <feMergeNode in="SourceGraphic"/>
-            </feMerge>
+            <feComponentTransfer><feFuncA type="linear" slope="0.55"/></feComponentTransfer>
+            <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
           </filter>
           <filter id="redGlow" x="-60%" y="-60%" width="220%" height="220%">
             <feGaussianBlur stdDeviation="6" result="blur"/>
-            <feMerge>
-              <feMergeNode in="blur"/>
-              <feMergeNode in="SourceGraphic"/>
-            </feMerge>
+            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
           </filter>
         </defs>
 
         <ellipse cx="200" cy="240" rx="190" ry="220" fill="url(#aura)"/>
 
         <g filter="url(#softShadow)">
-          <path d="M 200 40
-                   C 100 40, 40 130, 40 220
-                   C 40 285, 75 330, 120 355
-                   L 120 375
-                   C 120 395, 145 405, 200 405
-                   C 255 405, 280 395, 280 375
-                   L 280 355
-                   C 325 330, 360 285, 360 220
-                   C 360 130, 300 40, 200 40 Z"
-                fill="url(#boneGrad)"/>
-
-          <path d="M 60 180 C 55 220, 65 270, 100 305 C 75 285, 55 235, 60 180 Z"
-                fill="#5a5040" opacity="0.35"/>
-          <path d="M 340 180 C 345 220, 335 270, 300 305 C 325 285, 345 235, 340 180 Z"
-                fill="#5a5040" opacity="0.35"/>
+          <path d="M 200 40 C 100 40, 40 130, 40 220 C 40 285, 75 330, 120 355 L 120 375 C 120 395, 145 405, 200 405 C 255 405, 280 395, 280 375 L 280 355 C 325 330, 360 285, 360 220 C 360 130, 300 40, 200 40 Z" fill="url(#boneGrad)"/>
+          <path d="M 60 180 C 55 220, 65 270, 100 305 C 75 285, 55 235, 60 180 Z" fill="#5a5040" opacity="0.35"/>
+          <path d="M 340 180 C 345 220, 335 270, 300 305 C 325 285, 345 235, 340 180 Z" fill="#5a5040" opacity="0.35"/>
           <ellipse cx="200" cy="105" rx="105" ry="45" fill="#ffffff" opacity="0.16"/>
-
           <g stroke="#3a3226" stroke-width="1.4" fill="none" opacity="0.55" stroke-linecap="round">
-            <path d="M 168 62 L 158 105 L 172 138"/>
-            <path d="M 172 138 L 165 165"/>
-            <path d="M 232 68 L 245 108 L 235 142"/>
-            <path d="M 235 142 L 245 168"/>
-            <path d="M 130 88 L 122 120 L 133 145"/>
-            <path d="M 275 95 L 282 122 L 272 148"/>
+            <path d="M 168 62 L 158 105 L 172 138"/><path d="M 172 138 L 165 165"/>
+            <path d="M 232 68 L 245 108 L 235 142"/><path d="M 235 142 L 245 168"/>
+            <path d="M 130 88 L 122 120 L 133 145"/><path d="M 275 95 L 282 122 L 272 148"/>
             <path d="M 200 55 L 205 80 L 196 100"/>
           </g>
-
           <ellipse cx="110" cy="245" rx="28" ry="16" fill="#ffffff" opacity="0.18"/>
           <ellipse cx="290" cy="245" rx="28" ry="16" fill="#ffffff" opacity="0.18"/>
           <ellipse cx="105" cy="270" rx="35" ry="14" fill="#4a4030" opacity="0.4"/>
@@ -1030,22 +988,11 @@
           <circle class="eye-core" cx="270" cy="220" r="6" fill="#ff5555" filter="url(#redGlow)"/>
         </g>
 
-        <path d="M 200 245
-                 C 185 258, 178 280, 190 295
-                 C 195 300, 200 302, 200 302
-                 C 200 302, 205 300, 210 295
-                 C 222 280, 215 258, 200 245 Z"
-              fill="url(#nasalGrad)"/>
-        <path d="M 200 245
-                 C 185 258, 178 280, 190 295
-                 C 195 300, 200 302, 200 302
-                 C 200 302, 205 300, 210 295
-                 C 222 280, 215 258, 200 245 Z"
-              fill="none" stroke="#2a2018" stroke-width="1.8" opacity="0.9"/>
+        <path d="M 200 245 C 185 258, 178 280, 190 295 C 195 300, 200 302, 200 302 C 200 302, 205 300, 210 295 C 222 280, 215 258, 200 245 Z" fill="url(#nasalGrad)"/>
+        <path d="M 200 245 C 185 258, 178 280, 190 295 C 195 300, 200 302, 200 302 C 200 302, 205 300, 210 295 C 222 280, 215 258, 200 245 Z" fill="none" stroke="#2a2018" stroke-width="1.8" opacity="0.9"/>
 
         <g filter="url(#softShadow)">
-          <path d="M 118 355 L 118 385 C 118 400, 145 410, 200 410 C 255 410, 282 400, 282 385 L 282 355 Z"
-                fill="url(#boneGrad)"/>
+          <path d="M 118 355 L 118 385 C 118 400, 145 410, 200 410 C 255 410, 282 400, 282 385 L 282 355 Z" fill="url(#boneGrad)"/>
           <g fill="url(#toothGrad)" stroke="#5a4f40" stroke-width="1.2">
             <rect x="128" y="358" width="17" height="34" rx="3"/>
             <rect x="148" y="358" width="17" height="38" rx="3"/>
@@ -1056,24 +1003,15 @@
             <rect x="248" y="358" width="17" height="34" rx="3"/>
           </g>
           <g fill="#3a3226" opacity="0.5">
-            <rect x="128" y="386" width="17" height="6"/>
-            <rect x="148" y="390" width="17" height="6"/>
-            <rect x="168" y="392" width="17" height="6"/>
-            <rect x="188" y="392" width="17" height="6"/>
-            <rect x="208" y="392" width="17" height="6"/>
-            <rect x="228" y="390" width="17" height="6"/>
+            <rect x="128" y="386" width="17" height="6"/><rect x="148" y="390" width="17" height="6"/>
+            <rect x="168" y="392" width="17" height="6"/><rect x="188" y="392" width="17" height="6"/>
+            <rect x="208" y="392" width="17" height="6"/><rect x="228" y="390" width="17" height="6"/>
             <rect x="248" y="386" width="17" height="6"/>
           </g>
         </g>
 
         <g class="skull-jaw" filter="url(#softShadow)">
-          <path d="M 115 400
-                   C 115 435, 150 465, 200 465
-                   C 250 465, 285 435, 285 400
-                   L 285 395
-                   C 285 388, 250 380, 200 380
-                   C 150 380, 115 388, 115 395 Z"
-                fill="url(#boneGradJaw)"/>
+          <path d="M 115 400 C 115 435, 150 465, 200 465 C 250 465, 285 435, 285 400 L 285 395 C 285 388, 250 380, 200 380 C 150 380, 115 388, 115 395 Z" fill="url(#boneGradJaw)"/>
           <g fill="url(#toothGradLower)" stroke="#5a4f40" stroke-width="1.2">
             <rect x="128" y="382" width="17" height="30" rx="3"/>
             <rect x="148" y="382" width="17" height="34" rx="3"/>
@@ -1085,8 +1023,7 @@
           </g>
           <ellipse cx="200" cy="430" rx="70" ry="15" fill="#ffffff" opacity="0.14"/>
           <g stroke="#3a3226" stroke-width="1.2" fill="none" opacity="0.5">
-            <path d="M 140 405 L 148 425 L 140 445"/>
-            <path d="M 260 405 L 252 425 L 260 445"/>
+            <path d="M 140 405 L 148 425 L 140 445"/><path d="M 260 405 L 252 425 L 260 445"/>
           </g>
         </g>
       </svg>
@@ -1243,7 +1180,7 @@ function hkCond(hk){
 }
 
 /* =========================================================
-   POWERSHELL SCRIPT BUILDER
+   POWERSHELL SCRIPT BUILDER — Bulletproof version
    ========================================================= */
 function buildScript(){
   const charset   = psQuote(buildCharset());
@@ -1256,6 +1193,7 @@ function buildScript(){
   const startLbl  = hkLabel(state.hkStart).replace(/'/g, '');
   const stopLbl   = hkLabel(state.hkStop).replace(/'/g, '');
 
+  /* ===== per-attempt block ===== */
   const b = [];
   b.push('$len=$r.Next($min,$max+1)');
   b.push("$s=''");
@@ -1291,45 +1229,60 @@ function buildScript(){
 
   b.push('$n++');
   b.push("Write-Host ('[TRY '+$n+'] '+$s) -ForegroundColor Yellow");
-
   b.push("$e=[regex]::Replace($s,'([+^%~()\\[\\]{}])','{$1}')");
-  b.push('[System.Windows.Forms.SendKeys]::SendWait($e)');
+  b.push('try{[System.Windows.Forms.SendKeys]::SendWait($e)}catch{}');
   b.push('Start-Sleep -Milliseconds $d1');
 
   if (state.pressEnter){
-    b.push("[System.Windows.Forms.SendKeys]::SendWait('{ENTER}');Start-Sleep -Milliseconds $d2");
+    b.push("try{[System.Windows.Forms.SendKeys]::SendWait('{ENTER}')}catch{}");
+    b.push('Start-Sleep -Milliseconds $d2');
   }
   if (state.clearMode === 'selectall'){
-    b.push("[System.Windows.Forms.SendKeys]::SendWait('^a');[System.Windows.Forms.SendKeys]::SendWait('{BACKSPACE}')");
+    b.push("try{[System.Windows.Forms.SendKeys]::SendWait('^a')}catch{};try{[System.Windows.Forms.SendKeys]::SendWait('{BACKSPACE}')}catch{}");
   } else if (state.clearMode === 'backspace'){
-    b.push("for($q=0;$q -lt $s.Length;$q++){[System.Windows.Forms.SendKeys]::SendWait('{BACKSPACE}')}");
+    b.push("for($q=0;$q -lt $s.Length;$q++){try{[System.Windows.Forms.SendKeys]::SendWait('{BACKSPACE}')}catch{}}");
   }
   if (state.maxAttempts > 0){
     b.push("if($n -ge " + state.maxAttempts + "){$run=$false;Write-Host ('[DONE] Attempt limit reached: '+$n) -ForegroundColor Magenta}");
   }
 
+  /* ===== top-level statements ===== */
   const s = [];
-  s.push("$ErrorActionPreference='SilentlyContinue'");
-  s.push("Add-Type -AssemblyName System.Windows.Forms");
-  s.push("if(-not ('GK' -as [type])){Add-Type -TypeDefinition 'using System;using System.Runtime.InteropServices;public class GK{[DllImport(\"user32.dll\")]public static extern short GetAsyncKeyState(int v);[DllImport(\"user32.dll\")]public static extern bool ShowWindow(IntPtr h,int c);}'}");
-  s.push('function Kd($v){return (([GK]::GetAsyncKeyState($v) -band 0x8000) -ne 0)}');
+
+  s.push("$ErrorActionPreference='Continue'");
+
+  // Load Windows.Forms (needed for SendKeys)
+  s.push("try{Add-Type -AssemblyName System.Windows.Forms -ErrorAction Stop}catch{Write-Host '[ERROR] System.Windows.Forms not available. Requires Windows PowerShell 5.1+ on Windows.' -ForegroundColor Red;exit 1}");
+
+  // Load GK native helper (idempotent)
+  s.push("if(-not ('GK' -as [type])){try{Add-Type -TypeDefinition 'using System;using System.Runtime.InteropServices;public class GK{[DllImport(\"user32.dll\")]public static extern short GetAsyncKeyState(int v);[DllImport(\"user32.dll\")]public static extern bool ShowWindow(IntPtr h,int c);}' -ErrorAction Stop}catch{}}");
+  s.push("if(-not ('GK' -as [type])){Write-Host '[ERROR] GK helper type failed to load.' -ForegroundColor Red;exit 1}");
+
+  // Key-down check helper
+  s.push("function Kd([int]$v){return (([int][GK]::GetAsyncKeyState($v) -band 0x8000) -ne 0)}");
+
+  // Configuration
   s.push("$chars='" + charset + "'");
   s.push('$min=' + minL + ';$max=' + maxL);
   s.push('$d1=' + d1 + ';$d2=' + d2);
   s.push('$run=$false;$n=0;$dup=0');
   s.push('$r=New-Object System.Random');
+
   if (state.dedupe){
     s.push("$seen=New-Object 'System.Collections.Generic.HashSet[string]'");
   }
+
   s.push("Write-Host '[READY] Armed. " + startLbl + " = START | " + stopLbl + " = STOP' -ForegroundColor Cyan");
 
+  // Optional console minimize
   if (state.minimize){
-    s.push('Start-Sleep -Milliseconds 1200;$h=(Get-Process -Id $PID).MainWindowHandle;if($h -ne 0){[void][GK]::ShowWindow($h,6)}');
+    s.push("try{Start-Sleep -Milliseconds 1200;$proc=Get-Process -Id $PID;$hwnd=$proc.MainWindowHandle;if($hwnd -ne [IntPtr]::Zero){[void][GK]::ShowWindow($hwnd,6)}}catch{}");
   }
 
   const beepStart = state.beep ? 'try{[console]::beep(880,120)}catch{};' : '';
   const beepStop  = state.beep ? 'try{[console]::beep(440,160)}catch{};' : '';
 
+  // Main loop
   const loop =
     'while($true){' +
       'if(' + startCond + '){if(-not $run){$run=$true;Write-Host \'[STARTED] Script started\' -ForegroundColor Green;' + beepStart + '};Start-Sleep -Milliseconds 420};' +
@@ -2109,15 +2062,26 @@ async function copyText(text, msg){
   }
 }
 
+/* =========================================================
+   DOWNLOAD AS .ps1 — FORCE BINARY MIME + FILENAME
+   ========================================================= */
 function downloadScript(){
-  const blob = new Blob([buildScript()], { type:'text/plain;charset=utf-8' });
+  const script = buildScript();
+  // application/octet-stream forces binary download and preserves the
+  // .ps1 extension in all modern browsers (Chrome, Edge, Firefox, Safari).
+  const blob = new Blob([script], { type: 'application/octet-stream' });
+  const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
-  a.href = URL.createObjectURL(blob);
+  a.href = url;
   a.download = 'powercrack.ps1';
+  a.rel = 'noopener';
+  a.style.display = 'none';
   document.body.appendChild(a);
   a.click();
-  document.body.removeChild(a);
-  setTimeout(() => URL.revokeObjectURL(a.href), 1500);
+  setTimeout(() => {
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  }, 200);
   showToast('powercrack.ps1 exported');
 }
 
@@ -2285,4 +2249,4 @@ document.addEventListener('keydown', e => {
 })();
 </script>
 </body>
-</html>
+  </html>
