@@ -1,0 +1,17 @@
+{
+  "name": "PowerCrack",
+  "short_name": "PowerCrack",
+  "description": "Interactive payload generator for authorized penetration testing.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0a0a0a",
+  "theme_color": "#0a0a0a",
+  "categories": ["developer", "utilities", "security"],
+  "icons": [
+    { "src": "img.jpg", "sizes": "192x192", "type": "image/jpeg", "purpose": "any" },
+    { "src": "img.jpg", "sizes": "512x512", "type": "image/jpeg", "purpose": "any" },
+    { "src": "img.jpg", "sizes": "512x512", "type": "image/jpeg", "purpose": "maskable" }
+  ]
+}
