@@ -12,6 +12,15 @@
 <link rel="manifest" href="manifest.json">
 <link rel="icon" type="image/jpeg" href="img.jpg">
 <link rel="apple-touch-icon" href="img.jpg">
+<script>
+if ('serviceWorker' in navigator){
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('sw.js', { scope: './' })
+      .then(r => console.log('[PWA] SW registered:', r.scope))
+      .catch(e => console.warn('[PWA] SW registration failed:', e));
+  });
+}
+</script>
 <style>
   :root{
     --mac-titlebar:rgba(246,246,247,0.94);
